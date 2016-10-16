@@ -12,17 +12,20 @@ var table = $('#dataTable').DataTable({
     //"lengthChange": true,
     //"info": true,
     //"autoWidth": false,
-    data: toJsonRequest(),
+    data: jQuery.parseJSON(winformObj.getProxyModel),
     columns: [
-            { data: 'status'},
-            { data: 'proxy' },
-            { data: 'ip' },
-            { data: 'country' },
-            { data: 'city' },
-            { data: 'speed' },
-            { data: 'uptime' }
-        ]
-
+            {
+                data: 'status', title: 'status', "render": function (data, type, full, meta) {
+                    return data + ' kbs';
+                }
+            },
+            { data: 'proxy', title: 'proxy' },
+            { data: 'ip', title: 'ip' },
+            { data: 'country', title: 'country' },
+            { data: 'city', title: 'city' },
+            { data: 'speed', title: 'speed' },
+            { data: 'uptime', title: 'uptime' }
+    ]
 });
 
 var data = $('#example tbody').on('dblclick', '.even', function () {
@@ -36,14 +39,3 @@ $('#example tbody').on('dblclick', '.odd', function () {
     var result = winformObj.GetProxyModel();
     $("#test").append(result);
 });
-
-function toJsonRequest() {
-    alert(winformObj.getProxyModel);
-    var txt = winformObj.getProxyModel;
-    txt.substring(0, txt.length - 1);
-    txt.substr(1);
-    alert(txt);
-    return txt;
-    }
-
-    
