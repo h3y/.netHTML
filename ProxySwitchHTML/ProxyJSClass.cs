@@ -22,6 +22,7 @@ namespace ProxySwitchHTML
                 using (var request = new HttpRequest())
                 {
                     request.UserAgent = Http.ChromeUserAgent();
+                    request.Get("http://proxy.am/api.php?key=oh8jdxakyr");
                     string response = request.Get("http://proxy.am/list/socks.php?t=light&switch").ToString();
                     proxyModel = JsonConvert.DeserializeObject<ProxyModel>(response);
                 }

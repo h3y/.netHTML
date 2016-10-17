@@ -3,19 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>Title of the document</title>
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.material.min.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.1.0/material.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700">
     <script defer src="https://code.jquery.com/jquery-1.12.3.js"></script>
     <script defer src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
     <script defer src="https://cdn.datatables.net/1.10.12/js/dataTables.material.min.js"></script>
-    
+    <script defer src="https://cdn.datatables.net/plug-ins/1.10.12/sorting/ip-address.js"></script>
+    <script defer src="https://cdn.datatables.net/plug-ins/1.10.12/sorting/natural.js"></script>
+    <style>
+        body{    
+            color: #444;
+            font-family: RobotoDraft, Roboto, sans-serif;
+            font-size: 14px;
+
+        }
+        #dataTable {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+        .material-icons-customColorRed {
+            color: #f44336;
+        }
+        .material-icons {
+              font-family: 'Material Icons';
+              font-weight: normal;
+              font-style: normal;
+              font-size: 24px;  /* Preferred icon size */
+              display: inline-block;
+              line-height: 1;
+              text-transform: none;
+              letter-spacing: normal;
+              word-wrap: normal;
+              white-space: nowrap;
+              direction: ltr;
+
+              /* Support for all WebKit browsers. */
+              -webkit-font-smoothing: antialiased;
+              /* Support for Safari and Chrome. */
+              text-rendering: optimizeLegibility;
+
+              /* Support for Firefox. */
+              -moz-osx-font-smoothing: grayscale;
+
+              /* Support for IE. */
+              font-feature-settings: 'liga';
+        }
+        .mdl-data-table {
+          font-size: 13px; 
+        }
+    </style>  
 </head>
 
 <body>
-    <div id="test"></div>
-    <table id="dataTable" class="table table-bordered table-striped">
-    </table>
-    
+    <table id="dataTable" class="mdl-data-table nowrap" cellspacing="0" width="100%"></table>
     <script defer src="JavaScript1.js"></script>
 </body>
 
