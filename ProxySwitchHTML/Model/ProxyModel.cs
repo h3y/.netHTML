@@ -9,7 +9,6 @@ namespace ProxySwitchHTML.Model
     public class ProxyModel
     {
         public List<data> data { get; set; }
-
     }
     public class data
     {
