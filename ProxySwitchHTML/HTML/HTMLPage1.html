@@ -55,11 +55,33 @@
         .mdl-data-table {
           font-size: 13px; 
         }
+        .mdl-data-table{ 
+            border: none; 
+
+        }
+        ::-webkit-scrollbar
+        {
+          width: 5px;  /* for vertical scrollbars */
+          height: 5px; /* for horizontal scrollbars */
+        }
+
+        ::-webkit-scrollbar-track
+        {
+          background: rgba(0, 0, 0, 0.1);
+        }
+
+        ::-webkit-scrollbar-thumb
+        {
+          background: rgba(0, 0, 0, 0.5);
+        }
+        /*.mdl-grid {
+            display:none;
+        }*/
     </style>  
 </head>
 
 <body>
-    <table id="dataTable" class="mdl-data-table nowrap" cellspacing="0" width="100%"></table>
+    <table id="dataTable" class="" cellspacing="0" width="100%"></table>
     <script defer src="JavaScript1.js"></script>
 </body>
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proxyswich;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace ProxySwitchHTML
 {
     static class Program
     {
+
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -16,7 +18,16 @@ namespace ProxySwitchHTML
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            LoginForm loginFrm = new LoginForm();
+            loginFrm.ShowDialog();
+            if (AccountModel.accountModel != null)
+            {
+                Application.Run(new Main());
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
     }
 }
